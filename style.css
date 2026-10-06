@@ -265,3 +265,23 @@ body {
   .footer-right { text-align: left; }
 }
 
+
+/* ADDITIONS FROM DECK UPDATE */
+.hiring-stat-num--text { font-size: clamp(36px,5vw,64px); }
+.engagement-gallery { grid-template-columns: repeat(4, 1fr); }
+@media (max-width: 1024px) { .engagement-gallery { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 768px) { .engagement-gallery { grid-template-columns: 1fr; } }
+.section-improvement { padding: var(--section-gap) 0; background: var(--cream-mid); }
+.improvement-list { list-style: none; padding: 0; margin: 28px 0 0; display: grid; gap: 14px; max-width: 760px; }
+.improvement-item { background: white; border: 1px solid rgba(0,0,0,0.07); border-left: 4px solid var(--blue-accent); border-radius: 14px; padding: 20px 24px; font-size: 17px; font-weight: 500; color: var(--text-dark); }
+
+
+/* THANK YOU - FULL SLIDE */
+.section-thanks { min-height: 100vh; min-height: 100svh; display: flex; align-items: center; justify-content: center; text-align: center; background: var(--navy); color: #fff; padding: 96px 24px; position: relative; overflow: hidden; }
+.section-thanks::before { content: ""; position: absolute; top: 50%; left: 50%; width: 70vmin; height: 70vmin; transform: translate(-50%,-50%); border: 1.5px solid rgba(108,139,255,0.15); border-radius: 50%; pointer-events: none; }
+.thanks-inner { position: relative; z-index: 1; display: flex; flex-direction: column; align-items: center; gap: 18px; max-width: 900px; }
+.thanks-title { font-family: var(--font-serif); font-style: italic; font-weight: 800; font-size: clamp(64px, 15vw, 190px); line-height: 1; letter-spacing: -0.03em; color: #fff; margin: 0; }
+.thanks-sub { font-size: clamp(15px, 1.8vw, 20px); color: rgba(255,255,255,0.65); max-width: 34em; }
+.thanks-name-block { margin-top: 36px; padding-top: 28px; border-top: 1px solid rgba(255,255,255,0.12); }
+.thanks-name { font-size: 20px; font-weight: 700; color: #fff; margin-bottom: 4px; }
+.thanks-desc { font-size: 14px; color: rgba(255,255,255,0.55); }

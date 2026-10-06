@@ -70,14 +70,14 @@
   if (typeof Lenis !== 'undefined') {
     var lenis = new Lenis({ smoothWheel: true, lerp: 0.1 });
     var skewEls = document.querySelectorAll('.scroll-skew');
-    var MAX_SKEW = 6; // degrees — subtle, not distorted
+    var MAX_SKEW = 1.5; // degrees — very gentle
     var currentSkew = 0;
 
     function skewRaf(time) {
       lenis.raf(time);
       var velocity = lenis.velocity || 0;
-      var targetSkew = Math.max(-MAX_SKEW, Math.min(MAX_SKEW, velocity * 0.5));
-      currentSkew += (targetSkew - currentSkew) * 0.12;
+      var targetSkew = Math.max(-MAX_SKEW, Math.min(MAX_SKEW, velocity * 0.15));
+      currentSkew += (targetSkew - currentSkew) * 0.08;
       if (Math.abs(currentSkew) > 0.02) {
         var val = 'skewY(' + currentSkew.toFixed(2) + 'deg)';
         skewEls.forEach(function(el) { el.style.transform = val; });
